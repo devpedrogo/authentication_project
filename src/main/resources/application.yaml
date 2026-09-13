@@ -1,3 +1,10 @@
 spring:
   application:
     name: authentication-module
+    
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:4zV9xK1wY8qP3bN7mR0vC2xL5jH8fG1dS4aK9zX2yW5vB8nM3pQ6rT9uV2wX5yZ8}
+      expiration-ms: 900000 # 15 minutos em milissegundos
+      refresh-expiration-ms: 604800000 # 7 dias em milissegundos
