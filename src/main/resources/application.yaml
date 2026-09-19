@@ -1,6 +1,27 @@
 spring:
   application:
     name: authentication-module
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      # O Flyway gerenciará a DDL do banco (criação de tabelas), portanto o Hibernate valida apenas o esquema
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  flyway:
+    enabled: true
+    # Pasta onde os scripts de migration V1__... devem ficar localizados
+    locations: classpath:db/migration
+    baseline-on-migrate: true
     
 api:
   security:
