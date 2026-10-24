@@ -1,13 +1,13 @@
-# Authentication Module
+# 🔐 Authentication Module
 
-API de autenticação com Spring Boot, PostgreSQL e tokens JWT. Permite cadastrar usuários, iniciar sessão e renovar tokens.
+API de autenticação com Spring Boot, PostgreSQL e tokens JWT. Permite cadastrar usuários, iniciar sessão e renovar tokens. 🚀
 
-## Requisitos
+## 📋 Requisitos
 
-- Java 21
-- PostgreSQL
+- ☕ Java 21
+- 🐘 PostgreSQL
 
-## Configuração
+## ⚙️ Configuração
 
 Defina as variáveis de ambiente antes de iniciar a aplicação:
 
@@ -18,9 +18,9 @@ Defina as variáveis de ambiente antes de iniciar a aplicação:
 | `DB_PASSWORD` | Senha do banco |
 | `JWT_SECRET` | Chave usada para assinar os tokens |
 
-O banco informado em `DB_URL` deve existir. As tabelas são criadas pelo Flyway ao iniciar a aplicação. Configure uma chave `JWT_SECRET` própria e segura, especialmente fora do ambiente local.
+O banco informado em `DB_URL` deve existir. As tabelas são criadas pelo Flyway ao iniciar a aplicação. Configure uma chave `JWT_SECRET` própria e segura, especialmente fora do ambiente local. 🔒
 
-## Executar
+## ▶️ Executar
 
 No Windows, usando PowerShell:
 
@@ -34,9 +34,9 @@ Em sistemas Unix:
 ./mvnw spring-boot:run
 ```
 
-A API fica disponível em `http://localhost:8080`. A documentação interativa está em `http://localhost:8080/swagger-ui/index.html`.
+A API fica disponível em `http://localhost:8080`. A documentação interativa está em `http://localhost:8080/swagger-ui/index.html`. 📚
 
-## Endpoints
+## 🌐 Endpoints
 
 Todos os endpoints usam o prefixo `/api/v1/auth`.
 
@@ -46,7 +46,7 @@ Todos os endpoints usam o prefixo `/api/v1/auth`.
 | `POST` | `/login` | Autentica um usuário e retorna tokens |
 | `POST` | `/refresh-token` | Renova os tokens usando um refresh token |
 
-Exemplo de cadastro:
+Exemplo de cadastro: ✍️
 
 ```json
 {
@@ -56,11 +56,11 @@ Exemplo de cadastro:
 }
 ```
 
-O login recebe `email` e `password`. A renovação recebe `refreshToken`. As respostas de autenticação incluem `access_token` e `refresh_token`.
+O login recebe `email` e `password`. A renovação recebe `refreshToken`. As respostas de autenticação incluem `access_token` e `refresh_token`. 🎟️
 
-O access token expira em 15 minutos e o refresh token em 7 dias.
+O access token expira em 15 minutos e o refresh token em 7 dias. ⏱️
 
-## Testes
+## 🧪 Testes
 
 ```powershell
 .\mvnw.cmd test
