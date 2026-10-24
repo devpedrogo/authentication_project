@@ -67,3 +67,11 @@ O access token expira em 15 minutos e o refresh token em 7 dias. ⏱️
 ```
 
 Em sistemas Unix, use `./mvnw test`.
+
+Os testes de integração exercitam os endpoints de autenticação com H2 em memória. No Windows, execute:
+
+```powershell
+.\.github\integration-tests\run-layer1-tests.ps1
+```
+
+Em sistemas Unix, execute `bash .github/integration-tests/run-layer1-tests.sh`.
